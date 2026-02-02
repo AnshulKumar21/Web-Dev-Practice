@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | QuickBuy</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="login-container">
+
+    <h1 class="brand">QuickBuy</h1>
+
+    <!-- LOGIN FORM -->
+    <div id="loginBox">
+      <p class="subtitle">Login to your account</p>
+
+      <input type="text" placeholder="Email or Username">
+      <input type="password" placeholder="Password">
+
+      <button onclick="showHome()">Login</button>
+
+      <p class="switch-text">
+        Don’t have an account?
+       <button onclick="createAccount()">Create Account</button>
+
+      </p>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <div id="signupBox" style="display: none;">
+      <p class="subtitle">Create a new account</p>
+
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+
+      <button>Create Account</button>
+
+      <p class="switch-text">
+        Already have an account?
+        <button onclick="loginUser()">Login</button>
+
+      </p>
+    </div>
+
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Card */
+.login-container {
+  background-color: #ffffff;
+  width: 420px;
+  padding: 45px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Brand */
+.brand {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ff6f00;
+  margin-bottom: 8px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 28px;
+}
+
+/* Inputs */
+.login-container input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.login-container input:focus {
+  border-color: #ff6f00;
+  background-color: #f9f9f9;
+}
+
+/* Button */
+.login-container button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ff6f00;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.login-container button:hover {
+  background-color: #e65c00;
+}
+
+/* Switch text */
+.switch-text {
+  margin-top: 22px;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Clickable text */
+.switch-text span {
+  color: #ff6f00;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 35px 25px;
+  }
+
+  .brand {
+    font-size: 30px;
+  }
+}
