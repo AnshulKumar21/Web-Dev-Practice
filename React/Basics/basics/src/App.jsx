@@ -3,7 +3,7 @@ import Student from './Student';
 const App = () => {
   return (
     <div>
-      <h1>Hello</h1>
+      <h1>Helllo</h1>
         <Student/>
     </div>
      
