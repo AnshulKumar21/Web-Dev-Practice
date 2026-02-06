@@ -20,9 +20,11 @@
 
 
 
+// 
 import React, { useRef } from "react";
 import UseRef from "./Hooks/UseRef";
 import UseEffect from "./Hooks/UseEffect";
+import UseReftimer from "./Hooks/UseReftimer"
 
 const App = () => {
 
@@ -37,6 +39,9 @@ const App = () => {
       <UseRef scrollToList={scrollToList} />
 
       <UseEffect listRef={listRef} />
+
+      <h1>User Ref Timer Example</h1>
+      <UseReftimer/>
     </div>
   );
 };
