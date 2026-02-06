@@ -1,15 +1,45 @@
-import React from 'react'
-import UseEffect from './Hooks/UseEffect'
+// import React from 'react'
+// import UseEffect from './Hooks/UseEffect'
+// import UseRef from './Hooks/UseRef'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>Use Ref Examples</h1>
+//      <UseRef/>
+//       <h1>useState + useEffect Example</h1>
+
+//       <UseEffect />
+//       <h1>Use Ref Examples</h1>
+ 
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+import React, { useRef } from "react";
+import UseRef from "./Hooks/UseRef";
+import UseEffect from "./Hooks/UseEffect";
 
 const App = () => {
+
+  const listRef = useRef();
+
+  const scrollToList = () => {
+    listRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
-      <h1>useState + useEffect Example</h1>
+      <UseRef scrollToList={scrollToList} />
 
-      <UseEffect />
-
+      <UseEffect listRef={listRef} />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
+
