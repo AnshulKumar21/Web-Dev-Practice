@@ -19,3 +19,4 @@ sel.addEventListener("change",function(dets)
 {
 head.textContent = `${dets.target.value} Device  is selected`
 })
+console.log
