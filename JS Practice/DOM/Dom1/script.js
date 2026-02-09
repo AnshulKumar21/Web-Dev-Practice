@@ -12,4 +12,10 @@
 
 
 //Change event 
+let sel = document.querySelector("select")
+let head = document.querySelector("#s")
 
+sel.addEventListener("change",function(dets)
+{
+head.textContent = `${dets.target.value} Device  is selected`
+})
