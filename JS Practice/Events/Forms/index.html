@@ -15,6 +15,9 @@
       height:100%;
       
     }
+    body{
+      margin :30px;
+    }
     input{
       display: block;
     
@@ -54,10 +57,17 @@
       font-size: 12px;
       margin-top: 10px;
     }
+    small{
+      font-size: 20px;
+      color: rgb(47, 6, 6);
+    }
+    #hide{
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <div id ="main">
+  <!-- <div id ="main">
     <form>
       <input type="text" placeholder="profile pic">
        <input type="text" placeholder="name">
@@ -66,15 +76,42 @@
       <input type="text" placeholder="info">
       <input type="submit">
     </form>
-    <!-- <div class="card">
+     <div class="card">
         <div class="profile">
           <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
         </div>
            <h3>Anshul Kumar</h3>
         <h5>Creative Coder</h5>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem nisi ab officiis id magni ipsam sunt odio. Deleniti, aut. Dolor neque accusantium officia.</p>
-    </div> -->
+    </div> 
+   </div> --><form id="form">
+   <input id="name" type="text" placeholder="name">
+   <div id="hide">
+  <br>
+  <small>Your name should be more than 2 characters</small>
   </div>
+  <br>
+  <br>
+  <input id="email" type="email" placeholder="email">
+  <br>
+  <input id="password" type="password" placeholder="password">
+  <br>
+  <select>
+    <option value="male">male</option>
+    <option>Female</option>
+  </select>
+  <br>
+  <br>
+  <textarea placeholder="Tell us About Yourself"></textarea>
+  <br>
+  <br>
+  <input type="submit">
+  </form>
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+  
