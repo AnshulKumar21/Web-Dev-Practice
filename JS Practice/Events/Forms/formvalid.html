@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Password Validator</title>
+  <link rel="stylesheet" href="formvalid.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login Form</h2>
+
+    <form id="loginForm" autocomplete="off">
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="text" id="email" placeholder="Enter Email">
+        <small id="emailError">Error</small>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter Password">
+        <small id="passwordError">Error</small>
+      </div>
+
+      <button type="submit">Validate</button>
+
+      <p id="successMsg"></p>
+
+    </form>
+  </div>
+
+  <script src="formvalid.js"></script>
+</body>
+</html>
