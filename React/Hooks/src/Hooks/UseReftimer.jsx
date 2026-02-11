@@ -1,38 +1,48 @@
-import React, { useRef, useState } from 'react';
+//1
 
-const UseRefTimer = () => {
 
-  const [count, setCount] = useState(0);
 
-  const timeRef = useRef(null);
 
-  const start = () => {
-    if (timeRef.current) return;
+// import React, { useRef, useState } from 'react';
 
-    timeRef.current = setInterval(() => {
-      setCount(prev => prev + 1);
-    }, 1000);
-  };
+// const UseRefTimer = () => {
 
-  const stop = () => {
-    clearInterval(timeRef.current);
-    timeRef.current = null;
-  };
+//   const [count, setCount] = useState(0);
 
-  const reset = () => {
-    stop();
-    setCount(0);
-  };
+//   const timeRef = useRef(null);
 
-  return (
-    <div>
-      <h1>Timer: {count}</h1>
+//   const start = () => {
+//     if (timeRef.current) return;
 
-      <button onClick={start}>Start</button>
-      <button onClick={stop}>Stop</button>
-      <button onClick={reset}>Reset</button>
-    </div>
-  );
-};
+//     timeRef.current = setInterval(() => {
+//       setCount(prev => prev + 1);
+//     }, 1000);
+//   };
 
-export default UseRefTimer;
+//   const stop = () => {
+//     clearInterval(timeRef.current);
+//     timeRef.current = null;
+//   };
+
+//   const reset = () => {
+//     stop();
+//     setCount(0);
+//   };
+
+//   return (
+//     <div>
+//       <h1>Timer: {count}</h1>
+
+//       <button onClick={start}>Start</button>
+//       <button onClick={stop}>Stop</button>
+//       <button onClick={reset}>Reset</button>
+//     </div>
+//   );
+// };
+
+// export default UseRefTimer;
+
+
+//2
+
+

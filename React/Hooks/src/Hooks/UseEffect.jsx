@@ -49,6 +49,8 @@
 
 
 
+
+
 //2 on even inc by 2 on odd dec by 1 
 
 // import React, { useState, useEffect } from 'react'
@@ -100,6 +102,8 @@
 // }
 
 // export default UseEffect
+
+
 
 
 
@@ -156,7 +160,7 @@
 // export default UseEffect
 
 
-//Show/Hide password 
+//4 Show/Hide password 
 // import React, { useState } from 'react'
 
 // const ShowPassword = () => {
@@ -191,7 +195,7 @@
 // export default ShowPassword
 
 
-
+//5
 //fetch api
 // import React, { useState, useEffect } from "react";
 
@@ -228,43 +232,104 @@
 // export default App;
  
 
-import React, { useState, useEffect } from "react";
 
-function UseEffect({ listRef }) {
+//6
+// import React, { useState, useEffect } from "react";
 
-  const [users, setUsers] = useState([]);
+// function UseEffect({ listRef }) {
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(res => res.json())
-      .then(data => setUsers(data));
-  }, []);
+//   const [users, setUsers] = useState([]);
 
-  return (
-    <div ref={listRef}>
-      <h1>User List</h1>
+//   useEffect(() => {
+//     fetch("https://jsonplaceholder.typicode.com/users")
+//       .then(res => res.json())
+//       .then(data => setUsers(data));
+//   }, []);
 
-      {users.map((user) => (
-        <div
-          key={user.id}
-          style={{
-            border: "1px solid black",
-            margin: "10px",
-            padding: "10px",
-            backgroundColor: "white",
-            color: "black"
-          }}
-        >
-          <h3>{user.name}</h3>
-          <p>Email: {user.email}</p>
-          <p>Phone: {user.phone}</p>
-          <p>Website: {user.website}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
+//   return (
+//     <div ref={listRef}>
+//       <h1>User List</h1>
 
-export default UseEffect;
+//       {users.map((user) => (
+//         <div
+//           key={user.id}
+//           style={{
+//             border: "1px solid black",
+//             margin: "10px",
+//             padding: "10px",
+//             backgroundColor: "white",
+//             color: "black"
+//           }}
+//         >
+//           <h3>{user.name}</h3>
+//           <p>Email: {user.email}</p>
+//           <p>Phone: {user.phone}</p>
+//           <p>Website: {user.website}</p>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default UseEffect;
 
 
+// QUESTION 7 – Window Title Update
+// import React, { useState, useEffect } from "react";
+
+// function App() {
+
+//   const [name, setName] = useState("");
+
+//   useEffect(() => {
+//     document.title = name;
+//   }, [name]);
+
+//   return (
+//     <div>
+//       <h1>Change Document Title</h1>
+
+//       <input
+//         type="text"
+//         placeholder="Enter title"
+//         onChange={(e) => setName(e.target.value)}
+//       />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// 8 – Online / Offline Status
+//import React, { useState, useEffect } from "react";
+
+// function App() {
+
+//   const [status, setStatus] = useState(navigator.onLine);
+
+//   useEffect(() => {
+
+//     const online = () => setStatus(true);
+//     const offline = () => setStatus(false);
+
+//     window.addEventListener("online", online);
+//     window.addEventListener("offline", offline);
+
+//     return () => {
+//       window.removeEventListener("online", online);
+//       window.removeEventListener("offline", offline);
+//     };
+
+//   }, []);
+
+//   return (
+//     <div>
+//       <h1>Network Status</h1>
+
+//       <h2>{status ? "Online" : "Offline"}</h2>
+//     </div>
+//   );
+// }
+
+// export default App;
