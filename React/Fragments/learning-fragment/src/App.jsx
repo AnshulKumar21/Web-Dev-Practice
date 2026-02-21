@@ -12,7 +12,7 @@ function App() {
 // let emptyMessage = foodItems.length===0 ? <h3> I am still hungry.</h3>: null;
   return(
 <>
-  <h1> Healthy Food</h1>
+  <h1 className="foodHeading"> Healthy Food</h1>
  <Errormsg item={foodItems}></Errormsg>
  <Fooditem item={foodItems}></Fooditem>
  <Items></Items>
