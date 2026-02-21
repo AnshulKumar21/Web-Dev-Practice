@@ -1,5 +1,7 @@
 
 .foodHeading{
-  background-color: silver;
+  background-color: rgb(141, 201, 66);
   color: brown;
+  text-align: center;
+  height: 60px;
 }

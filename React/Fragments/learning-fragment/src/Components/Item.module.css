@@ -1,7 +1,13 @@
 .item{
   background-color: khaki;
+
 }
 .itemspan{
   font-weight: 500;
   color: blue;
+  text-align: center;
+}
+.button{
+  border-radius: 5px;
+  float: right;
 }

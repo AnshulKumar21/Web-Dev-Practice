@@ -8,8 +8,12 @@ const Fooditem = ({item}) => {
      <ul className="list-group">
     {item.map((item)=> (
      <Item key ={item}
-     fooditem = {item}>
-      
+     fooditem = {item}
+     HandleBuyButtonClick ={ (e)=>
+
+    console.log(`${item} is being bought`)
+ }>
+       
      </Item>
      ))}
  
