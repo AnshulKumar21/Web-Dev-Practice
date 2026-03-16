@@ -14,7 +14,8 @@ let count = 0;
   let percenttext = document.querySelector("#percentText")
   let btn = document.querySelector("#startBtn")
   btn.addEventListener("click",function(){
-setInterval(function(){
+setInterval(function()
+{
   if(count<100){
     count++;
   progress.style.width = `${count}%`
@@ -22,4 +23,5 @@ setInterval(function(){
   }else{
     btn.textContent = "Downloaded"
   }
-},30)})
+  },50);
+});
