@@ -32,6 +32,7 @@ const App = () => {
 
   const scrollToList = () => {
     listRef.current.scrollIntoView({ behavior: "smooth" });
+    console.log("hello");
   };
 
   return (
