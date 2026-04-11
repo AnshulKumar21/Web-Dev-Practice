@@ -44,131 +44,128 @@ Food ordering App
   _______________________________________
   ## 📦 JavaScript Export & Import Notes
 
+## 📦 JavaScript Export & Import (Short Notes)
+
 ### 🔹 1. Named Export
 
-Named export ka use tab karte hain jab hume **multiple variables/functions export** karne hote hain.
-
-#### ✅ Export Syntax:
+Used when exporting **multiple variables/functions**.
 
 ```js
 export const CDN_URL = "https://example.com/image";
 export const LOGO_URL = "https://example.com/logo";
 ```
 
-#### ✅ Import Syntax:
-
 ```js
 import { CDN_URL, LOGO_URL } from "./constants";
 ```
 
-#### ⭐ Features:
-
-* Multiple values export kar sakte hain
-* Import karte time **same name use karna padta hai**
-* Curly braces `{}` ka use hota hai
-
-#### 🔄 Rename while importing:
-
-```js
-import { CDN_URL as IMG_URL } from "./constants";
-```
+✔️ Must use same names
+✔️ Uses `{ }`
 
 ---
 
 ### 🔹 2. Default Export
 
-Default export tab use hota hai jab file se **sirf ek main value export** karni ho.
-
-#### ✅ Export Syntax:
+Used for **one main value per file**.
 
 ```js
 const LOGO_URL = "https://example.com/logo";
-
 export default LOGO_URL;
 ```
-
-#### ✅ Import Syntax:
 
 ```js
 import LOGO from "./constants";
 ```
 
-#### ⭐ Features:
-
-* Sirf **ek default export allowed** hota hai
-* Import karte time **koi bhi naam de sakte hain**
-* Curly braces `{}` ka use nahi hota
+✔️ Only one allowed
+✔️ Any name can be used
+✔️ No `{ }`
 
 ---
 
-### 🔹 3. Multiple Values with Default Export
-
-Agar multiple values default export karni ho to unhe **object ke andar wrap** karna padta hai:
-
-#### ✅ Export:
+### 🔹 3. Multiple Values with Default
 
 ```js
 const constants = {
-  CDN_URL: "https://example.com/image",
-  LOGO_URL: "https://example.com/logo"
+  CDN_URL: "...",
+  LOGO_URL: "..."
 };
 
 export default constants;
 ```
 
-#### ✅ Import:
-
 ```js
 import constants from "./constants";
-
-console.log(constants.CDN_URL);
-```
-
-#### 🔄 Destructuring:
-
-```js
-const { CDN_URL, LOGO_URL } = constants;
 ```
 
 ---
 
-### 🔥 4. Named vs Default Export
+### 🔥 Named vs Default
 
-| Feature           | Named Export       | Default Export    |
-| ----------------- | ------------------ | ----------------- |
-| Number of exports | Multiple           | Only one          |
-| Import syntax     | `{ }` required     | No `{ }`          |
-| Naming            | Same name required | Any name allowed  |
-| Use case          | Multiple utilities | Single main value |
-
----
-
-### 🚀 Best Practice
-
-* ✅ Multiple values → **Named Export use karo**
-* ✅ Single main component/function → **Default Export use karo**
-* ✅ Large projects → Named exports preferred (better readability & scalability)
+| Named Export | Default Export |
+| ------------ | -------------- |
+| Multiple     | Single         |
+| `{ }`        | No `{ }`       |
+| Same name    | Any name       |
 
 ---
 
-### 💡 Example (Real Use Case)
+### 🚀 Summary
 
-```js
-// constants.js
-export const API_URL = "https://api.example.com";
-export const TIMEOUT = 5000;
+* Named → multiple values
+* Default → single value
+* Use named exports in most cases
+
+
+_______________________________________________________________________________________________________________________
+
+
+
+#React Hooks
+(Normal js utility functions)
+-usestate() Hook
+-useEffect() Hook
+
+
+-usestate() Hook
+Whenever a state variable chnages React re renders and updates ui.## useState (Short Definition)
+
+**useState** is a React Hook used to store and manage state (data) inside a functional component. It allows updating the state, which triggers a re-render of the UI.
+______________________________________________________________________
+
+Reconciliation Algorithm
+Virtual Dom =  It is  a representation of a actual DOM. And it is a normal js object.
+
+Diff Algorithm =  It finds the differnce between updated virtual dom and older one and compares them both and then updates only specific part and then actually updates original DOM
+## ⚛️ React DOM Concepts (Short Notes)
+### 🔹 Original DOM (Real DOM)
+* Actual browser DOM (HTML structure)
+* Changes are slow because browser re-renders UI
+---
+### 🔹 Virtual DOM
+* Lightweight JS object copy of Real DOM
+* React updates this first (faster operations)
+--
+### 🔹 Reconciliation
+
+* Process React uses to update UI
+* Compares old Virtual DOM with new Virtual DOM
+* Updates only changed parts
+---
+### 🔹 Diffing Algorithm
+* Finds differences between old and new Virtual DOM
+* Helps React decide what to update
+---
+### 📌 Example
+Old:
+```html
+<li>Banana</li>
 ```
-
-```js
-// app.js
-import { API_URL, TIMEOUT } from "./constants";
+New:
+```html
+<li>Mango</li>
 ```
-
+👉 React updates only this `<li>`, not whole DOM
 ---
-
-### 🧠 Summary
-
-* Named export → multiple values
-* Default export → single value
-* Dono ko mix bhi kar sakte ho (advanced use cases)
-
+### 🚀 One Line
+**React updates only the changed parts of the UI using Virtual DOM + Diffing**

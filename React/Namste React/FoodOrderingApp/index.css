@@ -40,3 +40,13 @@ padding: 0px 20px;
   display: flex;
   flex-wrap: wrap;
 }
+.filter-btn{
+  margin: 10px;
+}
+.filter-btn:hover{
+ cursor: pointer;
+}
+.card-content {
+  white-space: normal;
+  word-break: break-word;
+}
